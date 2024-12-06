@@ -26,6 +26,8 @@ const SPOTIFY_TOKEN_URL = 'https://accounts.spotify.com/api/token';
 const SPOTIFY_NOW_PLAYING_URL = 'https://api.spotify.com/v1/me/player/currently-playing';
 const SPOTIFY_RECENTLY_PLAYED_URL = 'https://api.spotify.com/v1/me/player/recently-played?limit=1';
 
+console.log('credentials: ', SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_REFRESH_TOKEN);
+
 const getBasicToken = () => Buffer.from(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`).toString('base64');
 
 const getAccessToken = async (): Promise<string> => {
@@ -42,6 +44,7 @@ const getAccessToken = async (): Promise<string> => {
     });
 
     const data = await response.json();
+    console.log('getAccessToken', data);
     return data.access_token;
 };
 
@@ -49,6 +52,8 @@ const fetchSpotifyData = async (url: string, accessToken: string): Promise<Spoti
     const response = await fetch(url, {
         headers: { Authorization: `Bearer ${accessToken}` },
     });
+
+    console.log('fetchSpotifyData', response);
 
     if (!response.ok) {
         throw new Error(`Failed to fetch data from ${url}`);

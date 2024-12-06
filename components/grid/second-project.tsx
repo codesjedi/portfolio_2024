@@ -4,7 +4,8 @@ import Project from '../project';
 export default function SecondProject() {
     return (
         <Project
-            projectName='API Collection'
+            projectUrl='https://www.egfactory.lat/'
+            projectName='EG Software Factory'
             projectImage={projectImage}
             backgroundColor='bg-orange-100'
         />

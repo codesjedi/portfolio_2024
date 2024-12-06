@@ -8,10 +8,12 @@ export default function Project({
     projectName,
     projectImage,
     backgroundColor,
+    projectUrl,
 }: Readonly<{
     projectName: string;
     projectImage: string | StaticImageData;
     backgroundColor: string;
+    projectUrl: string;
 }>) {
     return (
         <Card className={cn('group relative', backgroundColor)}>
@@ -27,7 +29,7 @@ export default function Project({
             <div className='absolute bottom-3 left-3'>
                 <Anchor
                     className='cancel-drag size-10 justify-end transition-all ease-in-out group-hover:w-full'
-                    href={`/projects/${toKebabCase(projectName)}`}
+                    href={projectUrl}
                     aria-label={projectName}>
                     <span className='hidden whitespace-nowrap opacity-0 transition-all duration-300 ease-in group-hover:translate-x-0 group-hover:opacity-100 md:inline'>
                         {projectName}

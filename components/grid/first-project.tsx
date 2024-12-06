@@ -4,7 +4,8 @@ import Project from '../project';
 export default function FirstProject() {
     return (
         <Project
-            projectName='Next Blog Starter'
+            projectUrl='https://whatsapp-linker.vercel.app'
+            projectName='Whatsapp Linker'
             projectImage={projectImage}
             backgroundColor='bg-red-100'
         />

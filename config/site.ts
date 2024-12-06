@@ -1,6 +1,6 @@
 export const siteConfig = {
-    title: 'Maulana Ahmad Aji Triadi',
-    description: 'I am a software engineer based in Yogyakarta, Indonesia.',
-    url: 'https://maulana.dev',
-    image: 'https://maulana.dev/images/og-image.png',
+    title: 'Enrique Gimenez',
+    description: 'I am a software engineer based in Asunción, Paraguay.',
+    url: 'https://enrique.digital',
+    image: 'https://enrique.digital/images/og-image.webp',
 };

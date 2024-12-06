@@ -1,11 +1,5 @@
 import { IconType } from 'react-icons';
-import {
-    FaFacebook,
-    FaGithub,
-    FaInstagram,
-    FaLinkedin,
-    FaYoutube,
-} from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaProductHunt } from 'react-icons/fa6';
 
 export interface Social {
     name: string;
@@ -15,29 +9,19 @@ export interface Social {
 
 const socials: Social[] = [
     {
-        name: 'Facebook',
-        url: 'https://facebook.com/maulism',
-        icon: FaFacebook,
-    },
-    {
         name: 'Github',
-        url: 'https://github.com/bymaul/',
+        url: 'https://github.com/codesjedi/',
         icon: FaGithub,
     },
     {
-        name: 'Instagram',
-        url: 'https://instagram.com/maulaanaahmad',
-        icon: FaInstagram,
-    },
-    {
         name: 'LinkedIn',
-        url: 'https://linkedin.com/in/maulana-ahmad',
+        url: 'https://linkedin.com/in/fenriquegimenez',
         icon: FaLinkedin,
     },
     {
-        name: 'YouTube',
-        url: 'https://youtube.com/@maulx',
-        icon: FaYoutube,
+        name: 'ProductHunt',
+        url: 'https://www.producthunt.com/@enrique_gimenez',
+        icon: FaProductHunt,
     },
 ];
 

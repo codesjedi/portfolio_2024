@@ -4,7 +4,8 @@ import Project from '../project';
 export default function ThirdProject() {
     return (
         <Project
-            projectName='Laravel POS'
+            projectUrl={`https://commerce-eg.vercel.app/es`}
+            projectName='E-commerce template'
             projectImage={projectImage}
             backgroundColor='bg-blue-100'
         />

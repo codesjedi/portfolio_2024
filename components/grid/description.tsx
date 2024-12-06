@@ -1,4 +1,4 @@
-import profile from '@/public/images/profile.jpg';
+import profile from '@/public/images/profile.webp';
 import Image from 'next/image';
 import Card from '../ui/card';
 
@@ -16,11 +16,9 @@ export default function Description() {
                 />
             </div>
             <p className='text-balance leading-relaxed'>
-                I&apos;m <span className='font-calistoga text-xl'>Maulana</span>
-                , a software engineer from Yogyakarta, Indonesia.{' '}
-                <span className='hidden md:inline'>
-                    I&apos;m interested in Laravel, Go, Node, and React.
-                </span>
+                I&apos;m <span className='font-calistoga text-xl'>Enrique</span>, a software engineer from Asunción,
+                Paraguay.{' '}
+                <span className='hidden md:inline'>I&apos;m interested in Node, Next, React, and Postgres.</span>
             </p>
         </Card>
     );

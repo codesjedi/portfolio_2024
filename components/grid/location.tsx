@@ -10,8 +10,8 @@ import Card from '../ui/card';
 const MAX_ZOOM = 10;
 const MIN_ZOOM = 4;
 const INITIAL_VIEW_STATE = {
-    latitude: -7.7962967,
-    longitude: 110.3667211,
+    latitude: -25.280002,
+    longitude: -57.63328,
     zoom: MAX_ZOOM,
 };
 
@@ -33,9 +33,7 @@ const Location = memo(function Location() {
             setCurrentZoom((prevZoom) => {
                 const newZoom = prevZoom + (zoomIn ? 1 : -1);
                 if (newZoom >= MIN_ZOOM && newZoom <= MAX_ZOOM) {
-                    zoomIn
-                        ? mapRef.current?.zoomIn()
-                        : mapRef.current?.zoomOut();
+                    zoomIn ? mapRef.current?.zoomIn() : mapRef.current?.zoomOut();
                     setIsButtonDisabled(true);
                     setTimeout(() => setIsButtonDisabled(false), 300);
                     return newZoom;
@@ -46,11 +44,7 @@ const Location = memo(function Location() {
         [isButtonDisabled]
     );
 
-    const mapStyle = useMemo(
-        () =>
-            `mapbox://styles/mapbox/${theme === 'dark' ? 'dark-v11' : 'streets-v12'}`,
-        [theme]
-    );
+    const mapStyle = useMemo(() => `mapbox://styles/mapbox/${theme === 'dark' ? 'dark-v11' : 'streets-v12'}`, [theme]);
 
     return (
         <Card className='relative size-full'>
@@ -95,10 +89,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     isVisible: boolean;
 }
 
-const Button = memo(function Button({
-    isVisible,
-    ...props
-}: Readonly<ButtonProps>) {
+const Button = memo(function Button({ isVisible, ...props }: Readonly<ButtonProps>) {
     return (
         <button
             className={cn(
