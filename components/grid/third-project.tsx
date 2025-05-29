@@ -1,13 +1,13 @@
-import projectImage from '@/public/projects/laravel-pos.png';
+import projectImage from '@/public/projects/gallery.png';
 import Project from '../project';
 
 export default function ThirdProject() {
-    return (
-        <Project
-            projectUrl={`https://commerce-eg.vercel.app/es`}
-            projectName='E-commerce template'
-            projectImage={projectImage}
-            backgroundColor='bg-blue-100'
-        />
-    );
+  return (
+    <Project
+      projectUrl={`https://gallery.enriquegimenez.me`}
+      projectName="Art Gallery"
+      projectImage={projectImage}
+      backgroundColor="bg-blue-100"
+    />
+  );
 }

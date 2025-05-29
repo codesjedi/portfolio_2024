@@ -29,7 +29,7 @@ export const generateMetadata = async ({ params }: { params: Params }) => {
       type: 'article',
       publishedTime: date,
       url: `${siteConfig.url}/posts/${post.slug}`,
-      authors: 'Maulana',
+      authors: 'Enrique Gimenez',
       images: siteConfig.image,
     },
     twitter: {
@@ -59,7 +59,7 @@ const PostPage = async ({ params }: { params: Params }) => {
     author: [
       {
         '@type': 'Person',
-        name: 'Enrique Giménez',
+        name: 'Enrique Gimenez',
         url: siteConfig.url,
       },
     ],
